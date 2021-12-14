@@ -1,0 +1,180 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body{
+
+    background-size:     cover;                      /* <------ */
+    background-position: auto;
+}
+
+.section h1{
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 60px;
+    color: white;
+}
+.section .s1{
+    background-color: rgb(rgb(0, 0, 0), rgb(0, 0, 0), rgb(0, 0, 0), 0.3);
+    width: 600px;
+    height: 500px;
+    display: flex;
+}
+.description p{
+    font-size: 30px;
+    font-family: 'Abel', sans-serif;
+    
+}
+.s1{
+    background:linear-gradient(to right, rgb(223, 97, 13),rgb(224, 169, 133));
+    background-size: cover;
+    background-position: center;
+
+
+}
+.header-s1{
+    grid-area: "header-s1";
+    position: absolute;
+    top: 30%;
+    left: 5%;
+    text-shadow: 2px 2px black;
+    
+}
+.description {
+    grid-area: "desc";
+    width: 500px;
+    position: absolute;
+    left: 5%;
+}
+
+.s2{
+    background:linear-gradient(to right, rgb(110, 158, 136),rgb(25, 160, 99));
+    background-size: cover;
+    background-position: auto;
+}
+.s3{
+    background: linear-gradient(to right, #5ddfff, #00a2ff);
+}
+.s4{
+    background: linear-gradient(to right, #aa8ac5, #a745bb);
+
+}
+.main-nav{
+    position: fixed;
+    z-index: 111;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    background-color: rgb(102, 102, 102);
+    border-bottom: 3px solid black;
+
+
+
+}
+.divider{
+    width: 15px;
+    height: 300vh;
+    position: absolute;
+    background-color: black;
+    z-index: 11;
+    left: 60%;
+
+}
+#logo{
+    font-family: 'Fjalla One', sans-serif;
+    letter-spacing: .2em;
+    grid-column: 1/2;
+    margin-left: 3em;
+}
+.main-nav ul{
+    list-style-type: none;
+    display: flex;
+    grid-column: 4;
+    width: 600px;
+    font-family: 'Abel', sans-serif;
+    justify-content: space-evenly;
+}
+.main-nav ul li{
+    
+    font-size: 18px;
+    padding: 10px;
+
+}
+.main-nav ul li:hover{
+    
+    transition: .4s ;
+}
+.main-nav ul li a{
+    text-decoration: none;
+    color: white;
+}
+#animation1{
+    position: absolute;
+    top: 80vh;
+    left: 2em;
+    width: 100px;
+    height: 100px;
+    background-color: black;
+    z-index:111111;
+}
+.hosting-img{
+    position: absolute;
+    left: 45%;
+    top: 15%;
+
+}
+.hosting-img2{
+    position: absolute;
+    left: 45%;
+    top: 5%;
+    width: 600px;
+    
+
+}
+
+@media only screen and (max-width: 750px){
+    .header-s1{
+        position: absolute;
+        left: 25%;
+        top: 25%;
+ 
+    }
+    .description{
+        position: absolute;
+        top: 80%;
+        left: 60%;
+        transform: translate(-60%,-50%);
+    }
+    .divider{
+        visibility: hidden;
+    }
+    .main-nav{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        padding-bottom: 0.5em;
+
+    }
+    .main-nav h1{
+        padding: 0.6em;
+        
+       
+    }
+    #logo{
+        left: 50%;
+        right: 50%;
+        transform: translate(-20%,-10%);
+    }
+    .s1 .hosting-img{
+        position: absolute;
+        left: 60%;
+        top: 40%;
+        z-index:-1;
+    }
+}
+
